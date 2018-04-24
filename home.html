@@ -1,0 +1,20 @@
+<html>
+<head>
+<h1 align="center">ELECTION  CANDIDATE  INFORMATION  SYSTEM</h2>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+</br>
+</br>
+<iframe src="http://www.prsindia.org/mptrack/16loksabha/list?state=Bihar" height="800" width="1000" allow-scripts="True" seamless></iframe> 
+<script>
+$("#content").load("http://www.prsindia.org/mptrack/16loksabha/list?state=Bihar", function(response, status, xhr) {
+  if(status == "error") {
+    $("#content").html("An error occured: " + xhr.status + " " + xhr.statusText);
+  }
+});
+</script> 
+
+</body>
+</html>
